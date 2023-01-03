@@ -1,6 +1,6 @@
 import {BrowserRouter, Routes, Route } from "react-router-dom";
-import Videos from "./compements/Videos";
-import VideoDetail from "./compements/VideoDetail";
+import Videos from "./page/Videos";
+import VideoDetail from "./page/VideoDetail";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Videos/>} />
           <Route path="/videos" element={<Videos/>} />
-          <Route path="/videos/query" />
+          <Route path="/videos/query" element={<Videos/>} />
           <Route path="/watch/id" element={<VideoDetail/>} />
         </Routes>
       </BrowserRouter>
