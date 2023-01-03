@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Outlet from './page/Outlet';
 // import { createBrowserRouter } from 'react-router-dom';
 
 // type Props = {
@@ -14,6 +15,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    <Outlet />
     <App />
   </React.StrictMode>
 );
