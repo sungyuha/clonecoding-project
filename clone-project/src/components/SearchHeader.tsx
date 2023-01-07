@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import {BsYoutube, BsSearch} from 'react-icons/bs';
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SearchHeader: React.FunctionComponent = () => {
     // const navigate = useNavigate();
@@ -12,10 +12,11 @@ const SearchHeader: React.FunctionComponent = () => {
     //     onSubmit: (form: { name: string; description: string }) => void;
     // };
 
-    // const handleSubmit = (e: any) => {
-    //     e.preventDefault();
-    //     navigate(`/videos/${text}`);
-    // };
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+        console.log(text);
+        // navigate(`/videos/${text}`);
+    };
 
     return (
         <header>
@@ -25,7 +26,7 @@ const SearchHeader: React.FunctionComponent = () => {
                 <h1>Youtube</h1>
             </div>
             {/* 사용자가 검색하는 부분 */}
-            <form >
+            <form onSubmit={handleSubmit}>
                 {/* onChange 이벤트가 발생하면 setText로 들어온 값이 e.target.value로 업데이트 */}
                 <input 
                     type="text" 
